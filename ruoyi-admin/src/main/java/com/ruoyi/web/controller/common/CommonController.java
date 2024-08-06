@@ -8,6 +8,8 @@ import com.ruoyi.common.utils.file.FileUploadUtils;
 import com.ruoyi.common.utils.file.FileUtils;
 import com.ruoyi.common.utils.file.MimeTypeUtils;
 import com.ruoyi.framework.config.ServerConfig;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +27,7 @@ import javax.servlet.http.HttpServletResponse;
  * 
  * @author ruoyi
  */
+@Api(description = "CommonController")
 @RestController
 public class CommonController
 {
@@ -39,6 +42,7 @@ public class CommonController
      * @param fileName 文件名称
      * @param delete 是否删除
      */
+    @ApiOperation("/common/download")
     @GetMapping("common/download")
     public void fileDownload(String fileName, Boolean delete, HttpServletResponse response, HttpServletRequest request)
     {
@@ -68,6 +72,7 @@ public class CommonController
     /**
      * 通用上传请求
      */
+    @ApiOperation("/common/upload")
     @PostMapping("/common/upload")
     public AjaxResult uploadFile(MultipartFile file) throws Exception
     {

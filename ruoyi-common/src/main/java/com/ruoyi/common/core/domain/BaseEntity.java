@@ -1,5 +1,7 @@
 package com.ruoyi.common.core.domain;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,16 +17,19 @@ public abstract class BaseEntity extends BaseAudit implements Serializable, IQue
     /**
      * 搜索值
      */
+    @TableField(exist = false)
     private String searchValue;
 
     /**
      * 备注
      */
+    @TableField(exist = false)
     private String remark;
 
     /**
      * 请求参数
      */
+    @TableField(exist = false)
     private Map<String, Object> params;
 
     @Override
