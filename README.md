@@ -1,5 +1,10 @@
-## 在线体验
-- 演示地址：http://wms.ichengle.top
+## 后端代码依赖
+1.admin程序主入口，顶级依赖，web端输出
+2.common程序基础依赖
+3.framework框架核心安全（system+common）
+4.gennerator代码生成模块（common）
+5.system系统管理模块（common）
+6.wms仓库管理模块（system+common）
 
 ## 若依wms简介
 若依wms是一套基于若依的wms仓库管理系统，支持lodop和网页打印入库单、出库单。毫无保留给个人及企业免费使用。
